@@ -1,0 +1,228 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    font-family: monospace;
+}
+#nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap : wrap;
+    justify-content: space-between;
+    background-color: #df8f57;
+    animation: colorChange 15s linear infinite alternate;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    top: 0px;
+    font-size: 1.2em;
+    box-shadow: 0 0 20px;
+  }
+  #links {
+    display: flex;
+    justify-content: space-around;
+  }
+  #contact-links {
+    display: flex;
+    flex-direction: row;
+}
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+#copy {
+    align-self: center;
+    justify-self: center;
+}
+#container {
+    display: flex;
+    flex-flow: row;
+    justify-content:space-around;
+    background: linear-gradient(180deg, #7d4ef5, #5bc8ac);
+    width: 100vw;
+    height: 100vh;
+}
+#container1 {
+    width: 75%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: 24vh;
+    margin-bottom: 33vh;
+}
+#container2 {
+    display: flex;
+    flex-flow: row;
+}
+#header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.experience-container {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-around;
+
+}
+#nath-pic {
+    width: 40%;
+    border-radius: 50%;
+}
+#index-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f56c4e;
+    background: linear-gradient(180deg, #5bc8ac, #7d4ef5);
+    border: 2px;
+    padding: 20px;
+}
+article {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    animation: colorChange 15s linear infinite alternate;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 0 20px;
+    position: fixed;
+    bottom: 0;
+}
+article {
+    display: flex;
+}
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.8em;
+    padding: 1px;
+    -webkit-box-reflect: below;
+    text-shadow: -1px 0 1px #7d4ef5; 
+}
+h2 {
+    padding: 10px;
+}
+li {
+    padding: 10px;
+    text-decoration: none;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+p {
+    padding: 10px;
+}
+/* projects carousel */
+
+  
+  .project-container {
+    display: flex;
+    width: 80vw;
+    padding: 0 10vw 30px 1vw;
+  }
+  
+  .project-tile {
+    font-family: monospace, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    overflow: hidden;
+  }
+  
+  .project-tile h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .project-tile h3:hover {
+    color: darkblue;
+  }
+  
+  .project-tile h3:active {
+    transform: scale(0.80);
+  }
+  
+  .project-tile.active {
+    flex: 5;
+  }
+  
+  .project-tile.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  
+  @media(max-width: 600px) {
+    .project-tile:nth-of-type(4),
+    .project-tile:nth-of-type(5) {
+      display: none;
+    }
+  }
+
+
+@keyframes colorChange {
+    0%,
+    24% {
+  background-color: #f5c46f; 
+    }
+    25%,
+    49% {
+  background-color: #f59a5e; 
+    }
+    50%,
+    74% {
+  background-color: #f56c4e; 
+    }
+    75%,
+    100% {
+  background-color: #f59a5e;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    #nav {
+        font-size: 0.8em;
+    }
+    #contact{
+        font-size: 0.8em;
+    }
+    #container2 {
+        flex-flow: column;
+        justify-content: space-around;
+    }
+    #nath-pic {
+        padding: 20px;
+    }
+    h2 {
+        padding: 2px;
+    }
+    li {
+        padding: 5px;
+    }
+  }
+  @media only screen and (max-width: 340px) {
+    #contact {
+        flex-direction: column;
+    }
+  }
