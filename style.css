@@ -52,8 +52,6 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    margin-top: 24vh;
-    margin-bottom: 33vh;
 }
 #container2 {
     display: flex;
