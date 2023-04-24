@@ -1,4 +1,4 @@
-const panels = document.querySelectorAll('project-tile')
+const panels = document.querySelectorAll('.project-tile')
 
 panels.forEach(panel => {
     panel.addEventListener('click', () => {
